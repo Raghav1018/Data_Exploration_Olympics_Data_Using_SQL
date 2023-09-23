@@ -6,6 +6,10 @@ The first file includes information about each player and the team they are a pa
 
 The second file includes information on the events, medals earned, sports, year, etc. Seasons: Summer and Winter Year: 1896 - 2016 ,Events: 765 ,66 sports ,39783 medals were earned, with 13372 gold, 13116 silver, and 13295 bronze.
 
+## Skills Used:
+   Joins, CTE's, Window Functions, Subquery, String Function, Case Statements, Aggregate Functions, Date Functions
+
+   
 
 
 
