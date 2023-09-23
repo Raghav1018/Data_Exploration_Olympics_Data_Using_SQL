@@ -11,7 +11,7 @@ SELECT * FROM athlete_events$;
 SELECT * FROM athletes$;
 
 --2 for each team print total silver medals and year in which they won maximum silver medal..output 3 columns
--- team,total_silver_medals, year_of_max_silver(DOUBT)
+-- team,total_silver_medals, year_of_max_silver
 
 WITH A AS(SELECT a.team, ae.year,  COUNT(CASE WHEN ae.medal='Silver' THEN 1 END) as total_silver_medals
 , RANK() OVER(PARTITION BY a.team ORDER BY  COUNT(CASE WHEN ae.medal='Silver' THEN 1 END) DESC) AS rnk
@@ -89,7 +89,7 @@ GROUP BY ae.year,a.name
 HAVING COUNT(DISTINCT medal)=3;
 
 --8 find players who have won gold medals in consecutive 3 summer olympics in the same event . Consider only olympics 2000 onwards. 
---Assume summer olympics happens every 4 year starting 2000. print player name and event name.(DOUBT)
+--Assume summer olympics happens every 4 year starting 2000. print player name and event name.
 
 SELECT * FROM athlete_events$;
 SELECT * FROM athletes$;
